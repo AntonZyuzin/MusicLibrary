@@ -1,0 +1,67 @@
+﻿@using MusicLibrary.Domain.Data
+@using MusicLibrary.Domain.Repositories
+@using MusicLibrary.Models
+
+<div class="album_page" id="album_page">
+    <div class="genre_page_container">
+        <div class="genre_page_header">
+            <h2>Album page</h2>
+            <div class="line_1"></div>
+        </div>
+
+        <div class="genre_page_body">
+            <div class="genre_page_column">
+                <div class="genre_page_left_menu">
+                    <div class="album_page_image_container">
+                        <img class="album_page_image" src="~/images/albumImage.png">
+                        <div class="album_banner_text_1">Drinks</div>
+                        <div class="album_banner_text_2">CYN</div>
+                    </div>
+                </div>
+                <div class="genre_page_left_menu_button">
+                    <a href="#" class="form_button_cancel" id="close_album">
+                        <div class="genre_page_back" id="genre_pop_close">BACK TO ALL</div>
+                        <img src="~/images/arrowLeftBlack.svg">
+                    </a>
+                </div>
+            </div>
+            <div class="genre_page_column">
+                <div class="genre_page_songs">
+                    <div class="genre_page_songs_column">
+                        <div class="genre_page_songs_headline">SONG</div>
+                    </div>
+                </div>
+                <div class="genre_page_songs_line"></div>
+
+                <div class="genre_page_songs">
+                    <div class="genre_page_songs_column">
+                        <div class="genre_page_songs_name">Drinks</div>
+                    </div>
+                </div>
+                <div class="genre_page_songs_line"></div>
+                
+                @{
+                    static Song GetSong(int id)
+                    {
+                        var songRepo = new SongRepository(new MusicLibraryDbContext());
+                        var song = songRepo.GetSong(id);
+                        return song;
+                    }
+                }
+
+
+                @for (var i = 1; i < 10; i++)
+                {
+                    var song = GetSong(i);
+
+                    <div class="genre_page_songs">
+                        <div class="genre_page_songs_column">
+                            <div class="genre_page_songs_name">@song.SongName</div>
+                        </div>
+                    </div>
+                    <div class="genre_page_songs_line"></div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

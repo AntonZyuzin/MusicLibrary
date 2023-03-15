@@ -1,0 +1,32 @@
+﻿<div class="pop_up" id="pop_up">
+    <div class="pop_up_container" id="pop_up_container">
+        <div class="pop_up_body" id="pop_up_body">
+            <div class="form_header">
+                <h3>Music Library</h3>
+                <div class="form_header_sub_text">
+                    <p>ADD NEW</p>
+                    <div class="form_nav">
+                        <a href="#" class="form_nav_text" id = "open_add_form_song">SONG</a>
+                        <a href="#" class="form_nav_text" id = "open_add_form_singer">SINGER</a>
+                        <a href="#" class="form_nav_text" id = "open_add_form_album">ALBUM</a>
+                    </div>
+                </div>
+            </div>
+            <div class="form_body">
+                @await Html.PartialAsync("AddFormSongPartial")
+                @await Html.PartialAsync("AddFormSingerPartial")
+                @await Html.PartialAsync("AddFormAlbumPartial")
+            </div>
+            <div class="form_footer">
+                <a href="#" id="close_pop_up" class="form_button_cancel">
+                    <div class="text_cancel">CANCEL</div>
+                    <img src="~/images/arrowLeft.svg">
+                </a>
+                <a href="#" class="form_button_save">
+                    <div class="text_save">SAVE</div>
+                    <img src="~/images/arrowRight.svg">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

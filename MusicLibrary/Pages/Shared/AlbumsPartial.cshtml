@@ -1,0 +1,49 @@
+﻿<section class="albums">
+    <div class="container">
+        <h2>Recommended Albums</h2>
+        <div class="headerLine">
+            <div class="line_1"></div>
+        </div>
+        <div class="albums_container">
+            <div class="albums_cards_container">
+
+                <div class=album_banner>
+                    <div class="album_banner_text">
+                        <div class="album_banner_text_1">Best albums</div>
+                        <div class="album_banner_text_2">ONLY FOR YOU</div>
+                    </div>
+                </div>
+
+
+                <a class="album_card" id="open_album">
+                    <img class="album_image" src="~/images/albumImage.png">
+                    <div class="album_card_bottom">
+                        <div class="album_card_text">
+                            <div class="album_card_text_name">Drinks</div>
+                            <div class="album_card_text_singer">CYN</div>
+                        </div>
+                        <div>
+                           <img class="album_card_arrow" src="~/images/arrowUp.svg">
+                        </div>
+                    </div>
+                </a>
+
+                @await Html.PartialAsync("AlbumPagePartial")
+
+                <a class="album_card">
+                    <img class="album_image" src="~/images/albumImage.png">
+                    <div class="album_card_bottom">
+                        <div class="album_card_text">
+                            <div class="album_card_text_name">Drinks</div>
+                            <div class="album_card_text_singer">CYN</div>
+                        </div>
+                        <div>
+                           <img class="album_card_arrow" src="~/images/arrowUp.svg">
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>

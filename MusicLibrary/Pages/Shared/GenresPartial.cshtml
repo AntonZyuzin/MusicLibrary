@@ -1,0 +1,55 @@
+﻿<section class="genres">
+    <div class="container">
+        <h2>Genres</h2>
+        <div class="headerLine">
+            <div class="line_1"></div>
+        </div>
+        <div class="genres_menu">
+            <a class="genre_card" id="open_genre">
+                <img class="genre_image" src="~/images/genrePop.png">
+            </a>
+            @await Html.PartialAsync("GenrePagePartial")
+
+            <a class="genre_card" id="genre_kpop">
+                <img class="genre_image" src="~/images/genreKpop.png">
+            </a>
+
+            <a class="genre_card" id="genre_rock">
+                <img class="genre_image" src="~/images/genreRock.png">
+            </a>
+
+            <a class="genre_card" id="genre_elec">
+                <img class="genre_image" src="~/images/genreElec.png">
+            </a>
+
+            <a class="genre_card" id="genre_rap">
+                <img class="genre_image" src="~/images/genreRap.png">
+            </a>
+
+            <a class="genre_card" id="genre_lofi">
+                <img class="genre_image" src="~/images/genreLofi.png">
+            </a>
+        </div>
+
+
+
+        
+        <div class="genres_banner">
+            <video class="mix-blend-multiply structures__video" src="~/videos/genreVideo.mp4"
+                    autoplay=""
+                    playsinline=""
+                    loop=""
+                    muted="">
+            </video>
+
+            <div class="genres_banner_text">
+                <div>Choose</div>
+                <div>your</div>
+                <div>favorite</div>
+                <div>genre</div>
+            </div>
+        </div>
+
+        
+    </div>
+</section>

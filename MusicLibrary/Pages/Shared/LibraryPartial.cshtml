@@ -1,0 +1,53 @@
+﻿<section class="library">
+    <div class="container">
+        <h2>Your songs</h2>
+        <div class="headerLine">
+            <div class="line_1"></div>
+        </div>
+        <div class="main_menu">
+            <div class="card">
+                <div class="add-button">
+                    <a href="#" id="open_pop_up">
+                        <img class="add-image" src="~/images/add.png">
+                    </a>
+                </div>
+
+                @await Html.PartialAsync("AddFormPartial")
+
+
+                <div class="card_text_container">
+                    <div class="add-card_text">
+                        <div class="card_text_song_name">Song</div>
+                        <div class="card_text_info">Singer</div>
+                        <div class="card_text_info">Album</div>
+                        <div class="card_text_info">Genres</div>
+                    </div>
+                    <div class="arrows">
+                        <img class="arrow_1" src="~/images/arrowBold.svg">
+                        <img class="arrow_2" src="~/images/arrow.svg">
+                        <img class="arrow_3" src="~/images/arrow.svg">
+                        <img class="arrow_4" src="~/images/arrow.svg">
+                    </div>
+                </div>
+            </div>
+            <div class="scrolling-wrapper" id="scrolling-wrapper">
+
+            @for (var i = 0; i < 100; i++)
+            {
+                <div class="card">
+                    <img class="song_image" src="~/images/songImage.png">
+                    <div class="card_text_container">
+                        <div class="vertical_line"></div>
+                        <div class="card_text">
+                            <div class="card_text_song_name">Drinks</div>
+                            <div class="card_text_info">CYN</div>
+                            <div class="card_text_info">Drinks</div>
+                            <div class="card_text_info">Pop</div>
+                        </div>
+                    </div>
+                </div>
+            }
+            </div>
+        </div>
+    </div>
+</section>

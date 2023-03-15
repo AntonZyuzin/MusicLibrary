@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @await Html.PartialAsync("MetaTagsPartial")
+    @await Html.PartialAsync("CssPartial")
+</head>
+<body id="index_body">
+    <div id="page-wrapper">
+        @*Header*@
+        @await Html.PartialAsync("HeaderPartial")
+
+        @*Main*@
+        <main class="main">
+            @await Html.PartialAsync("HeadlinePartial")
+            @await Html.PartialAsync("LibraryPartial")
+            @await Html.PartialAsync("GenresPartial")
+            @await Html.PartialAsync("AlbumsPartial")
+        </main>
+
+        @*Footer*@
+        @await Html.PartialAsync("FooterPartial")
+    </div>
+    @*Scripts*@
+    @await Html.PartialAsync("ScriptsPartial")
+    @RenderBody()
+</body>
+</html>
